@@ -35,7 +35,7 @@ int main() {
         uint16_t z = 0;
 
         while (buf.length() < 16384 && z < 2048) {
-            sleep_until(delayed_by_us(start, (uint64_t) ((++tick * 1e6) / FREQ)));
+            busy_wait_until(delayed_by_us(start, (uint64_t) ((++tick * 1e6) / FREQ)));
 
             bool v = gpio_get(DATA) == 0;
             bool e = buf.empty();
