@@ -10,7 +10,7 @@ using namespace std;
 #define PWR 18
 #define DATA 17
 
-#define FREQ (38000)
+#define FREQ (2400)
 
 int main() {
     stdio_init_all();
