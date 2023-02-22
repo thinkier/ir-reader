@@ -20,6 +20,8 @@ add_executable(${NAME}
 
 target_link_libraries(${NAME}
         pico_stdlib
+        hardware_gpio
+        hardware_pwm
         )
 
 # enable usb output
