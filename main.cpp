@@ -22,8 +22,8 @@ int main() {
     gpio_set_function(PWM, GPIO_FUNC_PWM);
 
     pwm_config config = pwm_get_default_config();
-    pwm_config_set_clkdiv_mode(config, PWM_DIV_FREE_RUNNING);
-    pwm_config_set_clkdiv_int(6, SYS_CLK_FREQ / FREQ);
+    pwm_config_set_clkdiv_mode(&config, PWM_DIV_FREE_RUNNING);
+    pwm_config_set_clkdiv_int(&config, SYS_CLK_FREQ / FREQ);
 
     pwm_init(6, &config, false);
     pwm_set_wrap(6, 1);
